@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Specifies the document type as HTML5 -->
     <meta charset="UTF-8">
+    <!-- Ensures compatibility with the latest rendering engine in Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Ensures the webpage is responsive and scales properly on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sets the title of the webpage (appears on the browser tab) -->
     <title>Cube Calculator</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Links the Bootstrap CSS file for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+    <!-- Main container for the webpage content -->
     <div class="container mt-4">
+        <!-- A row for the dropdown and the button -->
         <div class="row mb-3">
+            <!-- Column for the dropdown menu -->
             <div class="col-md-4">
+                <!-- Dropdown menu for selecting the number of rows -->
                 <select id="row" class="form-select" onchange="createarray();">
+                    <!-- Default option prompting the user to select a number -->
                     <option value="0">Select rows</option>
+                    <!-- Options for the number of rows (1 to 5) -->
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -20,24 +32,36 @@
                     <option value="5">5</option>
                 </select>
             </div>
-            <div class="col-md-4">
+            <!-- Column for the "Show Cube" button -->
+            <div class="col-md-6 d-flex align-items-center"> 
+                <!-- Button to trigger the cube calculation when clicked -->
                 <input type="button" class="btn btn-primary" value="Show cube" onclick="updatearray();">
             </div>
+
         </div>
+        <!-- A row for the dynamically generated table -->
         <div class="row">
+            <!-- Table to display the input values and their cubes -->
             <table class="table table-bordered">
                 <thead>
+                    <!-- Header row for the table -->
                     <tr>
+                        <!-- Column header for the input values -->
                         <th>x</th>
+                        <!-- Column header for the cubes -->
                         <th>x^3</th>
                     </tr>
                 </thead>
+                <!-- Empty table body where rows will be added dynamically -->
                 <tbody id="tb1"></tbody>
             </table>
         </div>
     </div>
 
+    <!-- Links the external JavaScript file containing the logic for dynamic table creation and cube calculation -->
     <script src="./js/index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Links the Bootstrap JavaScript file for additional interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
